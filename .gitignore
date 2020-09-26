@@ -1,6 +1,9 @@
 HELP.md
 .gradle
+bin
 build/
+lib
+log
 gradle/wrapper/gradle-wrapper.jar
 gradle/wrapper/gradle-wrapper.properties
 !**/src/main/**/build/
