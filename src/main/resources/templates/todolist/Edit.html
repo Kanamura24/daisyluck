@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{commons/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>DaISy</title>
+    <style type="text/css">
+        .font-sample {
+            font-size: 40px;
+            font-family: Georgia;
+        }
+
+        .font-sample_2 {
+            font-size: 24px;
+            font-family: Georgia;
+        }
+        .a-title {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+        .b-title {
+            color: #4169e1;
+            text-decoration: none;
+        }
+
+
+
+
+
+
+    </style>
+    <link rel="stylesheet" href="/css/bootstrap.css"/>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.js"></script>
+</head>
+
+<body>
+
+<div layout:fragment="contents">
+
+    <div style="margin-top:150px;margin-bottom:200px;">
+        <div class="container">
+            <center>
+                <tr th:each="item:${item}" th:object="${item}">
+                    <h3 th:text="*{title}"></h3>
+                </tr>
+            </center>
+        </div>
+        <div>
+            <p></p>
+        </div>
+        <div class="container">
+            <center>
+                <tr th:each="item:${item}" th:object="${item}">
+                    <td th:text="*{elemNoun}"></td>
+                    が、
+                    <p/>
+                    <td th:text="*{elemTime}"></td>
+                    に、
+                    <p> なくなることをお知らせします。</p>
+                </tr>
+            </center>
+        </div>
+    </div>
+
+</div>
+<div layout:fragment="footer_s">
+    <div><a style="text-align:right;" href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+            data-show-count="false">Tweet</a></div>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+    <a style="text-align:right;" href="/daisy/luck">back.</a>
+</div>
+
+</body>
+</html>

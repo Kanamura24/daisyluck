@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{commons/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>DaISy</title>
+    <style type="text/css">
+        .font-sample {
+            font-size: 40px;
+            font-family: Georgia;
+        }
+
+        .a-title {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        html, body {
+            width: 50%;
+            height: 80%;
+            margin: 0;
+            padding: 50;
+        }
+        html {
+            display: table;
+        }
+        body {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+<div layout:fragment="contents">
+
+    <div class="container">
+
+        <img th:src="@{/img/daisy.jpg}" width="468px" height="247px">
+
+        <form th:action="@{/daisy/luck/msg}" th:method="get" th:object="${item}">
+            <div class="form-group">
+                <label class="control-label"></label>
+                <center>
+                    <input class="form-control" style="width: 500px;" placeholder="key word." type="text" name="title"/>
+                </center>
+            </div>
+            <center>
+                <button class="btn btn-default" type="submit">good luck.</button>
+            </center>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
